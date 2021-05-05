@@ -1,0 +1,26 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "realtime chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashuxldr/chatapp.git"
+  },
+  "author": "Ashutosh Jaiswal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashuxldr/chatapp/issues"
+  },
+  "homepage": "https://github.com/ashuxldr/chatapp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.0.1"
+  }
+}
