@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const path = require("path")
-const http = require("http")
-const server = http.createServer(app)
+const path = require("path");
+const http = require("http");
+const server = http.createServer(app);
 const port = 3000 || process.env.PORT;
-const socketio = require("socket.io")
+const socketio = require("socket.io");
 const io = socketio(server);
 
 io.on('connection', socket => {
@@ -16,6 +16,11 @@ io.on('connection', socket => {
 
     socket.on('disconnect', () => {
         io.emit('message', 'A user has exit the chat')
+
+    })
+
+    socket.on('chatMessage', msg => {
+        io.emit('message', msg)
     })
 });
 
