@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -9,7 +10,7 @@ const formatMessage = require("./utils/messages");
 const { userJoin, removeUser, roomUsers, userLeave } = require("./utils/users");
 const botname = "Amadeus";
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 io.on("connection", (socket) => {
   socket.on("joinRoom", ({ username, room }) => {
